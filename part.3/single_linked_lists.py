@@ -1,0 +1,2 @@
+class SingleLinkedListNode:
+    pass
