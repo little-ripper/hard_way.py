@@ -1,36 +1,44 @@
 
 # Table of Contents
 
-1.  [python hard way](#orge087e82)
-    1.  [part 1](#org4eadcab)
-    2.  [part 2](#orgc03b7ca)
-    3.  [part 3 Data Structures](#org6956661):search:tree:performance:bubble:quick:merge:sort:stacks:queue:liked:lists:
-2.  [post-index](#org173b720)
+1.  [python hard way](#org67d1ed8)
+    1.  [part 1](#orgdab1978)
+    2.  [part 2](#org85cc453)
+    3.  [part 3 Data Structures](#orgb37366f):search:tree:performance:bubble:quick:merge:sort:stacks:queue:liked:lists:
+        1.  [Single Lists Linked](#orga271473)
+2.  [post-index](#org6441376)
 
 
-<a id="orge087e82"></a>
+<a id="org67d1ed8"></a>
 
 # python hard way
 
 
-<a id="org4eadcab"></a>
+<a id="orgdab1978"></a>
 
 ## TODO part 1
 
 
-<a id="orgc03b7ca"></a>
+<a id="org85cc453"></a>
 
 ## TODO part 2
 
 
-<a id="org6956661"></a>
+<a id="orgb37366f"></a>
 
 ## part 3 Data Structures     :search:tree:performance:bubble:quick:merge:sort:stacks:queue:liked:lists:
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2025-09-12 Fri&gt;</span></span>
 
 
-<a id="org173b720"></a>
+<a id="orga271473"></a>
+
+### TODO Single Lists Linked
+
+DOCUMENTATION
+
+
+<a id="org6441376"></a>
 
 # post-index
 
