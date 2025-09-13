@@ -63,3 +63,62 @@ def test_unshift():
     assert colors.unshift() is None
     assert colors.count() == 0
     assert colors.count() == 0
+
+
+def test_remove():
+    colors = DoubleLinkedList()
+    colors.push('Cobalt')
+    colors.push('Zinc White')
+    colors.push('Nickle Yellow')
+    colors.push('Perinone')
+    assert colors.remove('Cobalt') == 0
+    assert colors.remove('DONT EXIST') is None
+    assert colors.remove('Perinone') == 2
+    assert colors.remove('Nickle Yellow') == 1
+    assert colors.remove('Zinc White') == 0
+    assert colors.remove('NO ITEMS ANYMORE') is None
+
+
+def test_first():
+    colors = DoubleLinkedList()
+    colors.push('Cadmium Red Light')
+    assert colors.first() == 'Cadmium Red Light'
+    colors.push('Hansa Yellow')
+    assert colors.first() == 'Cadmium Red Light'
+    colors.push('Pthalo Green')
+    assert colors.first() == 'Cadmium Red Light'
+    colors.shift('Deb Orange')
+    assert colors.first() == 'Deb Orange'
+    colors.shift('Blue Sky')
+    assert colors.first() == 'Blue Sky'
+
+
+def test_last():
+    colors = DoubleLinkedList()
+    colors.push('Cadmium Red Light')
+    assert colors.last() == 'Cadmium Red Light'
+    colors.push('Hansa Yellow')
+    assert colors.last() == 'Hansa Yellow'
+    colors.shift('Pthalo Green')
+    assert colors.last() == 'Hansa Yellow'
+
+
+def test_get():
+    colors = DoubleLinkedList()
+    colors.push('Vermillion')
+    assert colors.get(0) == 'Vermillion'
+    colors.push('Sap Green')
+    assert colors.get(0) == 'Vermillion'
+    assert colors.get(1) == 'Sap Green'
+    colors.push('Cadmium Yellow Light')
+    assert colors.get(0) == 'Vermillion'
+    assert colors.get(1) == 'Sap Green'
+    assert colors.get(2) == 'Cadmium Yellow Light'
+    assert colors.pop() == 'Cadmium Yellow Light'
+    assert colors.get(0) == 'Vermillion'
+    assert colors.get(1) == 'Sap Green'
+    assert colors.get(2) is None
+    colors.pop()
+    assert colors.get(0) == 'Vermillion'
+    colors.pop()
+    assert colors.get(0) is None

@@ -45,6 +45,11 @@ class DoubleLinkedList:
         if node is None:
             return
         self.end = node.prev
+        if node.prev is None:
+            self.end = None
+            self.begin = self.end
+        else:
+            node.prev.next = None
         self.elements -= 1
         return node.value
 
@@ -72,10 +77,52 @@ class DoubleLinkedList:
             self.begin.prev = None
         self.elements -= 1
         return node.value
-    
+
+    def remove(self, obj):
+        """Find a matching item and removes it from the list."""
+        indx = 0
+        node = self.begin
+        if node is None:
+            return
+        dlln = DoubleLinkedListNode(obj, None, None)
+        if node.value == dlln.value:
+            self.unshift()
+        else:
+            indx += 1
+            while node.next.value != dlln.value:
+                indx += 1
+                node = node.next
+                if node.next is None:
+                    return
+            node.next = node.next.next
+            if node.next is None:
+                # last node
+                self.end = node
+            else:
+                node.next.next.prev = node.value
+            self.elements -= 1
+        return indx
+
+    def first(self):
+        """Return a *reference* to the first item, does not remove."""
+        return self.begin.value
+
+    def last(self):
+        """Return a *reference* to the last item, does not remove."""
+        return self.end.value
+
     def count(self):
         """Counts the number of elements in the list."""
         return self.elements
+
+    def get(self, index):
+        """Get the value at index."""
+        count = 0
+        node = self.begin
+        while count < index:
+            count += 1
+            node = node.next
+        return node and node.value
 
     def __repr__(self):
         string = 'ɸ '
@@ -85,4 +132,3 @@ class DoubleLinkedList:
             init = init.next
         string += ' ɸ'
         return string
-    
