@@ -96,11 +96,11 @@ class SingleLinkedList:
         return indx
 
     def first(self):
-        """Resturn a *reference* to the first item, does not remove."""
+        """Return a *reference* to the first item, does not remove."""
         return self.begin.value
 
     def last(self):
-        """Resturn a *reference* to the last item, does not remove."""
+        """Return a *reference* to the last item, does not remove."""
         return self.end.value
 
     def count(self):
