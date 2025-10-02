@@ -5,7 +5,10 @@
 <2025-09-12 Fri>
 *** TODO Single Lists Linked
 DOCUMENTATION
-
+*** References
+- [[https://en.wikipedia.org/wiki/Bubble_sort][bubble sort]]
+- [[https://en.wikipedia.org/wiki/Merge_sort][merge sort]]
+- [[http://172.104.50.50/bitstream/cinec20/1229/1/2008_Book_TheAlgorithmDesignManual.pdf][Skiena]]
 
 
 * post-index

@@ -124,6 +124,15 @@ class DoubleLinkedList:
             node = node.next
         return node and node.value
 
+    def get_node(self, index):
+        """Get the node at index."""
+        count = 0
+        node = self.begin
+        while count < index:
+            count += 1
+            node = node.next
+        return node
+
     def __repr__(self):
         string = 'ɸ '
         init = self.begin
